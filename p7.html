@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    .imgStyle{
+      width: 24%;
+      height: 150px;
+      border: 3px solid gray;
+    }
+      nav {
+  position: fixed;
+  z-index: 999;
+  width: 97%;
+  height: 70px;
+  background-color: lavender;
+  line-height: 70px;
+}
+nav ul {
+  float: left;
+}
+nav ul li {
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 50px;
+  color: #0b0b0b;
+  font-size: 22px;
+}
+    
+ a{
+  text-decoration: none;
+}
+    
+  </style>
+</head>
+<body>
+<nav>
+  <ul>
+    <li><a href="home.htm">Home</a>   </li>
+    <li><a href="service.htm">Services</a>  </li>
+    <li><a href="contact.htm">Contact us</a>  </li>
+    <li><a href="faq.htm">FAQ</a> </li>
+  </ul>
+</nav>
+  <img id="mainImage" style="border: 3px solid grey"
+  src="Red_fort\1_fort.jpg" height="500px" width="98%">
+  <br/>
+  <div id="divId" onclick="changeImageonClick(event)">
+  <img class="imgStyle" src="Red_fort\1_fort.jpg"/>
+  <img class="imgStyle" src="Red_fort\2_fort.jpg"/>
+  <img class="imgStyle" src="Red_fort\3_fort.jpg"/>
+  <img class="imgStyle" src="Red_fort\4_fort.jpg"/>
+  </div>
+  <div>
+  <h1>About Red Fort</h1>
+    <img src="Red_fort\about_fort.jpg">
+  </div>
+  <div>
+    <h1>Monument Information</h1>
+    <img src="Red_fort\fort_detail.jpg">
+  </div>
+
+<script type="text/javascript">
+var images=document.getElementById("divId").getElementsByTagName("img");
+for(var i=0;i<images.length;i++)
+{
+  img[i].onmouseover=function(){
+    this.style.cursor='hand';
+    this.style.bordercolor='red';
+  }
+  img[i].onmouseout=function(){
+    this.style.cursor='pointer';
+    this.style.bordercolor='grey';
+}
+  }
+  function changeImageonClick(event){
+    event=event||window.event;
+    var targetElement=event.target||event.srcElement;
+    document.getElementById("mainImage").src=targetElement.getAttribute("src");
+  }
+
+</script>
+</body>
+</html>

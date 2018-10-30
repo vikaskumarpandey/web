@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    .imgStyle{
+      width: 24%;
+      height: 150px;
+      border: 3px solid gray;
+    }
+      nav {
+  position: fixed;
+  z-index: 999;
+  width: 97%;
+  height: 70px;
+  background-color: lavender;
+  line-height: 70px;
+}
+nav ul {
+  float: left;
+}
+nav ul li {
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 50px;
+  color: #0b0b0b;
+  font-size: 22px;
+}
+    
+  </style>
+</head>
+<body>
+<nav>
+  <ul>
+    <li>Home</li>
+    <li>Webshop</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+  <img id="mainImage" style="border: 3px solid grey"
+  src="Taj_mahal\1_taj.jpg" height="500px" width="98%">
+  <br/>
+  <div id="divId" onclick="changeImageonClick(event)">
+  <img class="imgStyle" src="Taj_mahal\1_taj.jpg"/>
+  <img class="imgStyle" src="Taj_mahal\2_taj.jpg"/>
+  <img class="imgStyle" src="Taj_mahal\3_taj.jpg"/>
+  <img class="imgStyle" src="Taj_mahal\4_taj.jpg"/>
+  </div>
+  <div>
+  <h1>About Taj Mahal</h1>
+    <img src="Taj_mahal\about_taj.jpg">
+  </div>
+  <div>
+    <h1>Monument Information</h1>
+    <img src="Taj_mahal\taj_detail.jpg">
+  </div>
+
+<script type="text/javascript">
+var images=document.getElementById("divId").getElementsByTagName("img");
+for(var i=0;i<images.length;i++)
+{
+  img[i].onmouseover=function(){
+    this.style.cursor='hand';
+    this.style.bordercolor='red';
+  }
+  img[i].onmouseout=function(){
+    this.style.cursor='pointer';
+    this.style.bordercolor='grey';
+}
+  }
+  function changeImageonClick(event){
+    event=event||window.event;
+    var targetElement=event.target||event.srcElement;
+    document.getElementById("mainImage").src=targetElement.getAttribute("src");
+  }
+
+</script>
+</body>
+</html>

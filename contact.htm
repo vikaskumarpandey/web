@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+margin:0px;
+padding :0px;
+}
+#one{
+height:50vh;
+width:100%;
+background-image:url(service.jpg);
+background-size:cover;
+display:table;
+background-attachment:fixed;
+}
+
+#two{
+height:1000px;
+width:100%;
+background-color:skyblue;
+display:table;
+background-attachment:fixed;
+}
+h1{
+font-family:arial black;
+font-size:70px;
+color:white;
+margin-top:100px;
+text-align:center;
+display:table-cell;
+vertical-align:middle;
+}
+body{
+background-color:skyblue;
+}
+ #t1{
+height:700px;
+width:400px;
+margin-top:100px;
+margin-left:100px;
+padding:20px;
+float:left;
+font-family:arial;
+color:black;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#t2{
+height:200px;
+width:400px;
+margin-top:100px;
+margin-right:100px;
+padding:20px;
+float:right;
+font-family:arial;
+color:black;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+#t1 input[type=text]{
+height:50px;
+width:80%;
+padding:5px;
+}
+#t1 input[type=email]{
+height:50px;
+width:80%;
+padding:5px;
+
+}
+#t1 input[type=submit]{
+height:50px;
+width:50%;
+border-radius:50px;
+background-color:red;
+border:0px;
+color:white;
+cursor:pointer;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#t1 textarea{
+padding:5px;
+color:grey;
+font-size:15px;
+}
+</style>
+<script>
+function check()
+{
+var x = document.forms["form"]["n1"].value;
+	if(x=="")
+	{alert("Topic must be filled out");
+		return false;
+		}
+		else{
+			document.getElementById("s1").innerHTML="";
+		}
+
+		var x2 = document.forms["form"]["n2"].value;
+		if(x2=="")
+	{alert("Name must be filled out");
+		form.n2.focus(); 
+		return false;
+		}
+		else{
+			document.getElementById("s2").innerHTML="";
+		}
+		
+		     re = /[0-9]/;
+      if(!re.test(form.x2.value)) {
+        alert("Name must not contain numbers");
+        form.n2.focus();
+        return false;
+      }
+	  else document.getElementById("i2").innerHTML="";
+var x3 = document.forms["form"]["n3"].value;
+		if(x3=="")
+	{alert("Name must be filled out");
+		form.n3.focus(); 
+		return false;
+		}
+		else{
+			document.getElementById("s3").innerHTML="";
+		}
+
+if(x!==""&&x2!==""&&x3!=="")
+{
+alert("Thank you!!");
+window.location="home.htm";
+}
+ 
+}
+</script>
+</head>
+<body>
+<br><br><br><br><br>
+<div id="one">
+<h1 >  THE MOTO DAIRIES</h1>
+</div>
+<div id="two">
+
+<div id="t1">
+<h2  style=" color:black"> Contact Form</h2>
+<hr width="100%" color="red" align="left">
+<p>Enter your comments through the form below, and our customer service professionals will contact you as soon as possible.
+</p>
+<form action="home.htm" onsubmit="return check()" name="form">
+<input type="text" placeholder="SELECT A TOPIC" name="n1"> <span id="s1"></span><br><br><br>
+<input type="text" placeholder="Your Name" name="n2"> <span id="s2"></span><br><br><br>
+<input type="email" pattern="[^ @]*@[^ @]*" name="n3" placeholder="Your Email"> <span id="s33"></span><br><br><br>
+<textarea rows = "5" cols = "38" name = "description">
+ Suggestions/Feedback/Comments
+</textarea><br><br>
+<input type="submit"  value="Submit now"><br>
+</form>
+</div>
+
+<div id="t2">
+<h3><b>OPENING HOURS</b></h3>	
+<hr width="100%" color="red" align="left">
+<div id="t3">
+<br><br>
+BOOKING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SUPPORT
+<br><br>24<small>x</small>7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24<small>x</small>7
+</div>
+</div>
+</div>
+
+</body>
+</html>

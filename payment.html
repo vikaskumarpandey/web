@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <style> 
+#panel, #flip, #panel1,#panel2,#flip1,#flip2 {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+}
+#one {
+height:500px;
+width:1360px;
+background-color:#BDB76B;
+margin-left:-10px;
+}
+#one img{
+margin-left:100px;
+height:250px;
+width:250px;
+}
+#two {
+margin-left:-10px;
+height:100px;
+width:1360px;
+margin-top:-200px;
+background-color:orange;
+color:white;
+font-family:arial;
+font-size:20px;}
+#three{
+height:250px;
+width:1360px;
+background-color:rgba(0,0,0,0.8);
+margin-top:0px;
+margin-left:-10px;
+}
+#td
+{
+width:105%;
+height:25px;
+}
+#td1
+{
+width:110%;
+height:25px;
+}
+#td2
+{
+width:110%;
+height:25px;
+}
+#td3
+{
+width:150%;
+height:25px;
+}
+#td,#td1,#td2,#td3{
+  border-right: thick solid white;
+}
+
+</style>
+
+<script> 
+$(document).ready(function(){
+	
+    $("#flip").click(function(){
+        $("#panel").slideDown(slow);
+    });
+});
+$(document).ready(function(){
+	
+    $("#flip1").click(function(){
+        $("#panel1").slideDown(slow);
+    });
+});
+$(document).ready(function(){
+	
+    $("#flip2").click(function(){
+        $("#panel2").slideDown(slow);
+    });
+});
+function check()
+{
+ x = document.getElementById("cdno").value;
+ y = document.getElementById("exp").value;
+ z = document.getElementById("cvc").value;
+ k = document.getElementById("code").value;
+if(x.length==16 && y.length==5 && z.length==3 && k.length==5)
+{
+alert("booked");
+}
+else
+{
+alert("please fill complete details");
+}
+}
+function check1()
+{
+ x = document.getElementById("crd").value;
+ y = document.getElementById("mm").value;
+ z = document.getElementById("yy").value;
+ k = document.getElementById("cvv").value;
+ a= document.getElementById("holder").value;
+ 
+if(x.length==16 && y.length==2 && z.length==2 && k.length==3 && a.length==5)
+{
+alert("booked");
+}
+else
+{
+alert("please fill complete details");
+}
+}
+</script>
+
+
+</head>
+<body style="background-color:#BDB76B">
+
+<nav class="navbar navbar-expand-sm bg-light">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="home.htm">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="contact.htm">Contact Us</a>
+    </li>
+	<li class="nav-item">
+      <a class="nav-link" href="faq.htm">FAQ</a>
+    </li>
+    <li class="nav-item" style="margin-left:1000px">
+      <a class="nav-link" href="home.htm">Logout</a>
+    </li>
+	
+	
+  </ul>
+</nav>
+<img src="wal.jpg" height="250px" width="1368px"></img><br><br>
+<h1 style="margin-left:400px"><i>SELECT YOUR PAYMENT METHOD</i></h1><br><br>
+<table border="1" style="margin-left:100px" width="1150px">
+<tr>
+<th>
+<h2 ><center>
+OPTIONS</center></h2>
+</th>
+</tr>
+ <tr>
+ <td><input type="radio" name="pay" id="flip" value="Credit">Credit card<br>
+<div id="panel">
+Card Number<br>
+<input type="text" id="cdno" placeholder="1234 1234 1234 1234"><br>
+Expration Date<br>
+<input type="text" id="exp" placeholder="MM / YY"> 
+<br>
+CVC code<br>
+<input type="text" id="cvc" placeholder="CVC">
+<br>
+Postal Code<br>
+<input type="text" id="code" placeholder="90210"><br><br>
+<input type="button" value="Proceed to Pay" onClick="check()">
+ </div>
+</td>
+</tr>
+<tr>
+<td>
+<input type="radio" name="pay" id="flip1" value="debit">Debit Card<br>
+<div id="panel1">
+Card Number<br>
+<input type="text" id="crd" placeholder="1234 1234 1234 1234"><br>
+Expration Date<br>
+<input type="text" id="mm" placeholder="MM">/<input type="text" id="yy"placeholder="YY"><br> 
+<br>
+CVV code<br>
+<input type="text" id="cvv" placeholder="CVV">
+<br>
+Cardholder Name<br>
+<input type="text" id="holder" placeholder="Cardholder Name"><br><br>
+<input type="button" value="Proceed to Pay" onClick="check1()">
+</td>
+</tr>
+<tr>
+<td>
+<input type="radio" name="pay" id="flip2" value="COD">Cash On Delivery</h3>
+<div id="panel2">
+<input type="button" value="Confirm" onClick="alert('Your vehicle is selected')">
+</td>
+</tr>
+
+</table>
+<br><br>
+<div id="one">
+<img src="logo.png">
+<div id="two">
+<table  align="center" id="t4" cellspacing="20px;" cellpadding="17px;">
+<tr>
+<td> <div id="td"><b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Your Story Our Wheels</b></div></td>
+<td><div id="td1"><b>Adventurous Rides</b></div></td>
+<td><div id="td2"><b> New Experiences</b></div></td>
+<td><div id="td3"><b> Be You </b></div></td>
+</tr>
+</table>
+</div>
+<div id="three"></div>
+</div>
+
+
+</body>
+</html>
+
+
